@@ -25,7 +25,7 @@ namespace KronoWeaveAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=antisocialgamers.online;Initial Catalog=KronoWeave;Persist Security Info=True;User ID=sa;Password=610@Re@per@016;TrustServerCertificate=True");
+               
             }
         }
 
