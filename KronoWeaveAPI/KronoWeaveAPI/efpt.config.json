@@ -22,6 +22,10 @@
       {
          "Name": "[dbo].[User]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Workflows]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "gro012_truserv_.KronoWeave.dbo",

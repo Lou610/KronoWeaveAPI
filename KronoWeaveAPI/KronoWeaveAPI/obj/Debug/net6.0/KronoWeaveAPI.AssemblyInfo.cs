@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KronoWeaveAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56666db7694c1e7b740543e1a1365b63d4b83ddd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76045f81ce5b2694c0487f08a9ab8eb828d44a59")]
 [assembly: System.Reflection.AssemblyProductAttribute("KronoWeaveAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KronoWeaveAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

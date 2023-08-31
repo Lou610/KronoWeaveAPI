@@ -3,6 +3,7 @@ using KronoWeaveAPI.Repository;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace KronoWeaveAPI.Controllers
 {
@@ -32,12 +33,25 @@ namespace KronoWeaveAPI.Controllers
             License license = new License();
 
             string LicenseType = string.Empty;
-            
+
             int UserID = UserRepository.GetUserID(Email);
 
             license = UserRepository.GetLicenseType(UserID);
 
             return license;
+        }
+        //GetUsers
+
+        [EnableCors("KronoWeave")]
+        [HttpGet]
+        [Route("api/GetUsers")]
+        public List<UserList> GetUsers()
+        {
+            List<UserList> user = new List<UserList>();
+
+            user = UserRepository.GetUsers();
+
+            return user;
         }
 
     }

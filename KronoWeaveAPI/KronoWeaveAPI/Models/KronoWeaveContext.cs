@@ -20,12 +20,13 @@ namespace KronoWeaveAPI.Models
 
         public virtual DbSet<License> License { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Workflows> Workflows { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-               
+                optionsBuilder.UseSqlServer("Data Source=antisocialgamers.online;Initial Catalog=KronoWeave;Persist Security Info=True;User ID=sa;Password=610@Re@per@016;TrustServerCertificate=True");
             }
         }
 
@@ -49,6 +50,19 @@ namespace KronoWeaveAPI.Models
                 entity.Property(e => e.UserEmailAddress).HasMaxLength(500);
 
                 entity.Property(e => e.UserName).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Workflows>(entity =>
+            {
+                entity.Property(e => e.LockedBy)
+                    .HasMaxLength(50)
+                    .HasColumnName("Locked_By");
+
+                entity.Property(e => e.Status).HasMaxLength(50);
+
+                entity.Property(e => e.WorkflowName)
+                    .HasMaxLength(50)
+                    .HasColumnName("Workflow_Name");
             });
 
             OnModelCreatingPartial(modelBuilder);
